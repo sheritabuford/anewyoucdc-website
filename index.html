@@ -1,0 +1,1250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A New You Community Development Coalition strengthens individuals and families through housing, education, consulting, and community resources.">
+  <meta name="theme-color" content="#17253f">
+  <title>A New You Community Development Coalition</title><link rel="canonical" href="https://anewyoucdc.com/">
+  <script>document.documentElement.classList.add('js');</script>
+  <style>
+    :root {
+      --navy: #4d365f;
+      --navy-2: #765087;
+      --rose: #e84f91;
+      --rose-dark: #b83c73;
+      --gold: #c99732;
+      --cream: #fff9fc;
+      --white: #ffffff;
+      --ink: #4d4852;
+      --muted: #746c78;
+      --line: #eedde7;
+      --shadow: 0 18px 60px rgba(108, 65, 125, .15);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    a { color: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; }
+
+    :focus-visible {
+      outline: 3px solid rgba(201, 63, 104, .4);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 999;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--navy);
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+    .brand-logo { width:58px; height:40px; object-fit:contain; border-radius:8px; background:#fff; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 18px;
+      color: var(--rose-dark);
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 34px;
+      height: 2px;
+      content: "";
+      background: var(--gold);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      color: var(--navy);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 7vw, 6.2rem);
+      font-weight: 500;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 4.7vw, 4.3rem);
+      font-weight: 500;
+    }
+
+    h3 {
+      margin-bottom: 11px;
+      font-size: 1.25rem;
+      letter-spacing: -.02em;
+    }
+
+    .lead {
+      max-width: 700px;
+      color: #4f5e75;
+      font-size: clamp(1.05rem, 1.8vw, 1.23rem);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading p:last-child { margin-bottom: 0; }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 21px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(23, 37, 63, .16);
+    }
+
+    .button-primary {
+      background: var(--rose);
+      color: var(--white);
+    }
+
+    .button-primary:hover { background: var(--rose-dark); }
+
+    .button-secondary {
+      border-color: rgba(23, 37, 63, .2);
+      background: rgba(255, 255, 255, .65);
+      color: var(--navy);
+    }
+
+    .button-light {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .button svg { width: 18px; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(232, 223, 214, .8);
+      background: rgba(251, 247, 241, .9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-weight: 900;
+      line-height: 1.05;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 50% 50% 50% 12px;
+      background: var(--rose);
+      color: var(--white);
+      font-family: Georgia, serif;
+      font-size: 1.45rem;
+      font-style: italic;
+      box-shadow: 0 9px 22px rgba(201, 63, 104, .25);
+    }
+
+    .brand-copy small {
+      display: block;
+      margin-top: 4px;
+      color: var(--rose-dark);
+      font-size: .69rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #45536a;
+      font-size: .92rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--rose-dark); }
+
+    .nav-links .nav-cta {
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .nav-links .nav-cta:hover { background: var(--rose); color: var(--white); }
+
+    .menu-button {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .menu-button svg { width: 22px; margin: auto; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(76px, 11vw, 140px) 0 90px;
+    }
+
+    .hero::before {
+      position: absolute;
+      top: 6%;
+      right: -12%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 63, 104, .14), rgba(201, 63, 104, 0) 67%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      align-items: center;
+      grid-template-columns: minmax(0, 1.2fr) minmax(330px, .8fr);
+      gap: 70px;
+    }
+
+    .hero h1 span {
+      position: relative;
+      color: var(--rose-dark);
+      white-space: nowrap;
+    }
+
+    .hero h1 span::after {
+      position: absolute;
+      right: 0;
+      bottom: -.04em;
+      left: 0;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(216, 168, 78, .55);
+      content: "";
+      transform: rotate(-1.5deg);
+      z-index: -1;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 490px;
+    }
+
+    .arch-card {
+      position: absolute;
+      inset: 0 0 28px 18px;
+      overflow: hidden;
+      border: 9px solid var(--white);
+      border-radius: 220px 220px 28px 28px;
+      background: linear-gradient(150deg, #314974 0%, var(--navy) 61%, #101a2d 100%);
+      box-shadow: var(--shadow);
+    }
+
+    .arch-card::before,
+    .arch-card::after {
+      position: absolute;
+      border-radius: 50%;
+      content: "";
+    }
+
+    .arch-card::before {
+      top: 50px;
+      left: 50%;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255, 255, 255, .17);
+      transform: translateX(-50%);
+      box-shadow: 0 0 0 40px rgba(255, 255, 255, .03), 0 0 0 80px rgba(255, 255, 255, .02);
+    }
+
+    .arch-card::after {
+      top: 90px;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle at 33% 32%, #f4d89c, var(--gold));
+      box-shadow: 0 0 70px rgba(216, 168, 78, .38);
+      transform: translateX(-50%);
+    }
+
+    .home-line {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      color: var(--white);
+    }
+
+    .visual-quote {
+      position: absolute;
+      right: -18px;
+      bottom: 0;
+      z-index: 4;
+      width: min(280px, 78%);
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, .65);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .94);
+      box-shadow: 0 14px 40px rgba(23, 37, 63, .18);
+      backdrop-filter: blur(10px);
+    }
+
+    .visual-quote strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 1.35rem;
+    }
+
+    .visual-quote span { color: var(--muted); font-size: .9rem; }
+
+    .trust-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: 70px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .trust-strip p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px 34px;
+      margin-top: 18px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .trust-items span {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .trust-items span::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      content: "";
+    }
+
+    .mission {
+      padding: 112px 0;
+      background: var(--white);
+    }
+
+    .mission-grid {
+      display: grid;
+      align-items: start;
+      grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+      gap: 90px;
+    }
+
+    .mission-statement {
+      position: sticky;
+      top: 120px;
+    }
+
+    .mission-statement .accent-copy {
+      color: var(--rose-dark);
+      font-family: Georgia, serif;
+      font-size: 1.3rem;
+      font-style: italic;
+    }
+
+    .values { display: grid; gap: 17px; }
+
+    .value {
+      display: grid;
+      padding: 25px 27px;
+      border: 1px solid #eee5dd;
+      border-radius: 20px;
+      background: #fffcf8;
+      grid-template-columns: auto 1fr;
+      gap: 19px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .value:hover { border-color: rgba(201, 63, 104, .35); transform: translateX(5px); }
+
+    .number {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: 50%;
+      background: #f7e4ea;
+      color: var(--rose-dark);
+      font-size: .83rem;
+      font-weight: 900;
+    }
+
+    .value p { margin: 0; color: var(--muted); }
+
+    .programs {
+      padding: 112px 0;
+      background: var(--cream);
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .program-card {
+      display: flex;
+      min-height: 405px;
+      flex-direction: column;
+      padding: 31px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: 0 10px 35px rgba(23, 37, 63, .055);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .program-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .program-card.featured {
+      border-color: transparent;
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .program-card.featured h3 { color: var(--white); }
+    .program-card.featured p, .program-card.featured li { color: #d9e0ea; }
+
+    .card-icon {
+      display: grid;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 52px;
+      place-items: center;
+      border-radius: 16px;
+      background: #f7e4ea;
+      color: var(--rose-dark);
+    }
+
+    .featured .card-icon { background: rgba(255, 255, 255, .1); color: #f1ca78; }
+    .card-icon svg { width: 27px; }
+
+    .program-card > p { color: var(--muted); }
+
+    .check-list {
+      display: grid;
+      gap: 8px;
+      margin: 4px 0 28px;
+      padding: 0;
+      color: #4f5e75;
+      font-size: .94rem;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 17px 1fr;
+      gap: 8px;
+    }
+
+    .check-list li::before {
+      color: var(--gold);
+      content: "✓";
+      font-weight: 900;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      color: var(--rose-dark);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .featured .text-link { color: #f1ca78; }
+    .text-link:hover { gap: 12px; }
+
+    .resources-wrap {
+      display: grid;
+      margin-top: 68px;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #ead2d9;
+      grid-template-columns: .87fr 1.13fr;
+    }
+
+    .resource-art {
+      position: relative;
+      min-height: 380px;
+      overflow: hidden;
+      background: linear-gradient(155deg, var(--rose-dark), #6f294b);
+    }
+
+    .resource-art::before {
+      position: absolute;
+      top: -80px;
+      right: -30px;
+      width: 260px;
+      height: 260px;
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 50px rgba(255, 255, 255, .055), 0 0 0 100px rgba(255, 255, 255, .03);
+    }
+
+    .resource-art blockquote {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      left: 34px;
+      margin: 0;
+      color: var(--white);
+      font-family: Georgia, serif;
+      font-size: clamp(1.8rem, 3.5vw, 3.15rem);
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .resource-content { padding: 52px; }
+
+    .resource-list {
+      display: grid;
+      margin-top: 28px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .resource-link {
+      display: flex;
+      min-height: 110px;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+      border: 1px solid rgba(23, 37, 63, .12);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .62);
+      color: var(--navy);
+      font-weight: 850;
+      text-decoration: none;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .resource-link:hover { background: var(--white); transform: translateY(-3px); }
+    .resource-link span { color: var(--rose-dark); font-size: 1.2rem; }
+
+    .contact {
+      padding: 112px 0;
+      background: var(--white);
+    }
+
+    .contact-shell {
+      display: grid;
+      overflow: hidden;
+      border-radius: 32px;
+      background: var(--navy);
+      color: var(--white);
+      grid-template-columns: .9fr 1.1fr;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-copy { padding: clamp(38px, 6vw, 72px); }
+
+    .contact-copy h2 { color: var(--white); }
+    .contact-copy .eyebrow { color: #f1ca78; }
+    .contact-copy p { color: #d7deea; }
+
+    .contact-details {
+      display: grid;
+      gap: 16px;
+      margin-top: 35px;
+    }
+
+    .contact-detail {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .contact-detail .mini-icon {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .1);
+      color: #f1ca78;
+    }
+
+    .contact-detail svg { width: 18px; }
+    .contact-detail strong { display: block; color: var(--white); font-size: .83rem; }
+    .contact-detail span { color: #cbd5e3; font-size: .92rem; }
+
+    .contact-form {
+      margin: 14px;
+      padding: clamp(30px, 5vw, 54px);
+      border-radius: 23px;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #d9dfe8;
+      border-radius: 12px;
+      background: #fcfcfd;
+      color: var(--ink);
+    }
+
+    input, select { height: 50px; padding: 0 14px; }
+    textarea { min-height: 116px; padding: 13px 14px; resize: vertical; }
+
+    .field { margin-bottom: 15px; }
+    .form-note { margin: 12px 0 0; color: var(--muted); font-size: .77rem; }
+    .form-status { min-height: 25px; margin: 12px 0 0; color: var(--rose-dark); font-size: .9rem; font-weight: 750; }
+
+    .who, .housing, .events, .faq { padding: 112px 0; }
+    .who { background: #fff; }
+    .who-grid, .housing-grid, .events-grid { display:grid; grid-template-columns: 1fr 1fr; gap:34px; align-items:center; }
+    .logo-panel { padding:38px; border:1px solid var(--line); border-radius:30px; background:linear-gradient(145deg,#fff,#faedf1); box-shadow:var(--shadow); }
+    .logo-panel img { width:100%; border-radius:20px; }
+    .impact-list { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:28px; }
+    .impact-list div { padding:18px; border-left:3px solid var(--gold); border-radius:8px; background:#fff; box-shadow:0 8px 25px rgba(23,37,63,.06); }
+    .impact-list strong { display:block; color:var(--navy); }
+    .housing { background:linear-gradient(160deg,#4d365f,#8e57a0); color:#fff; }
+    .housing h2, .housing h3 { color:#fff; }
+    .housing .eyebrow { color:#f1ca78; }
+    .housing .lead { color:#d9e0ea; }
+    .housing-flyer { padding:36px; border:1px solid rgba(255,255,255,.18); border-radius:30px; background:rgba(255,255,255,.09); box-shadow:0 25px 70px rgba(0,0,0,.22); }
+    .availability { display:inline-flex; padding:8px 13px; border-radius:999px; background:#e9bd5b; color:#4d365f; font-size:.8rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+    .price-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:13px; margin:25px 0; }
+    .price-card { padding:19px; border-radius:17px; background:#fff; color:var(--navy); }
+    .price-card strong { display:block; font-family:Georgia,serif; font-size:1.8rem; }
+    .amenities { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; padding:0; list-style:none; }
+    .amenities li { color:#e7ebf2; }
+    .amenities li::before { margin-right:8px; color:#f1ca78; content:'✓'; font-weight:900; }
+    .events { background:#fff; }
+    .event-list { display:grid; gap:14px; }
+    .event-card { display:grid; grid-template-columns:72px 1fr; gap:18px; padding:20px; border:1px solid var(--line); border-radius:18px; background:var(--cream); }
+    .event-date { display:grid; place-items:center; min-height:68px; border-radius:14px; background:var(--navy); color:#fff; font-weight:900; text-align:center; line-height:1.1; }
+    .event-date small { display:block; color:#f1ca78; font-size:.65rem; letter-spacing:.08em; }
+    .event-card h3 { margin-bottom:4px; }
+    .event-card p { margin:0; color:var(--muted); }
+    .calendar-box { padding:30px; border-radius:28px; background:linear-gradient(145deg,#faedf1,#fbf7f1); }
+    .calendar-box h3 { font-family:Georgia,serif; font-size:2rem; }
+    .calendar-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .faq { background:var(--cream); }
+    .faq-list { max-width:900px; margin:35px auto 0; }
+    details { margin-bottom:12px; border:1px solid var(--line); border-radius:16px; background:#fff; }
+    summary { padding:20px 56px 20px 22px; color:var(--navy); cursor:pointer; font-weight:850; list-style:none; position:relative; }
+    summary::after { position:absolute; right:22px; content:'+'; color:var(--rose-dark); font-size:1.5rem; }
+    details[open] summary::after { content:'–'; }
+    details p { padding:0 22px 22px; margin:0; color:var(--muted); }
+
+    footer {
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+      background: var(--cream);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { color: var(--navy); font-weight: 750; text-decoration: none; }
+    .footer-links a:hover { color: var(--rose-dark); }
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 900px) {
+      .menu-button { display: inline-grid; }
+
+      .nav-links {
+        position: fixed;
+        inset: 80px 0 auto;
+        display: none;
+        align-items: stretch;
+        padding: 24px 20px 30px;
+        border-bottom: 1px solid var(--line);
+        background: var(--cream);
+        flex-direction: column;
+        gap: 18px;
+        box-shadow: 0 24px 45px rgba(23, 37, 63, .12);
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links .nav-cta { text-align: center; }
+
+      .hero-grid,
+      .mission-grid,
+      .resources-wrap,
+      .contact-shell, .who-grid, .housing-grid, .events-grid { grid-template-columns: 1fr; }
+
+      .hero-grid { gap: 55px; }
+      .hero-visual { width: min(100%, 520px); min-height: 440px; margin: auto; }
+      .mission-grid { gap: 48px; }
+      .mission-statement { position: static; }
+      .program-grid { grid-template-columns: 1fr 1fr; }
+      .program-card:last-child { grid-column: 1 / -1; min-height: 330px; }
+      .resource-art { min-height: 300px; }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      .brand-copy { max-width: 220px; font-size: .89rem; }
+      .brand-copy small { font-size: .6rem; }
+      h1 { font-size: clamp(2.65rem, 15vw, 4.2rem); }
+      .hero { padding-top: 65px; }
+      .hero-visual { min-height: 365px; }
+      .arch-card { left: 0; }
+      .visual-quote { right: 8px; }
+      .trust-items { align-items: flex-start; flex-direction: column; padding-left: 20px; }
+      .mission, .programs, .contact { padding: 84px 0; }
+      .program-grid { grid-template-columns: 1fr; }
+      .program-card, .program-card:last-child { min-height: 360px; grid-column: auto; }
+      .card-icon { margin-bottom: 35px; }
+      .resource-content { padding: 34px 24px; }
+      .resource-list, .form-row { grid-template-columns: 1fr; }
+      .contact-copy { padding: 42px 27px; }
+      .contact-form { margin: 9px; padding: 30px 21px; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+      .impact-list, .price-grid, .amenities { grid-template-columns:1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="A New You Community Development Coalition home">
+        <img class="brand-logo" src="logo.svg" alt="">
+        <span class="brand-copy">A New You <small>Community Development Coalition</small></span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="who-we-serve.html">Who We Serve</a></li>
+        <li><a href="#housing">Housing</a></li>
+        <li><a href="staff-partners.html">Staff & Partners</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="booking.html">Client Booking</a></li><li><a href="client-upload.html">Client Upload</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="nav-cta" href="#contact">Contact Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Restoring hope. Building futures.</p>
+            <h1>A stronger future starts with <span>a new you.</span></h1>
+            <p class="lead">We help individuals, families, and communities move forward through supportive housing, practical education, business consulting, and connections to trusted resources.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="#programs">Explore our programs
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+              </a>
+              <a class="button button-secondary" href="#contact">Request assistance</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="A welcoming community and home illustration">
+            <div class="arch-card">
+              <svg class="home-line" viewBox="0 0 480 330" fill="none" aria-hidden="true">
+                <path d="M0 222 85 153l52 42 97-98 112 108 56-46 78 72v99H0V222Z" fill="#F9F4ED" opacity=".96"/>
+                <path d="m178 148 56-51 112 108v125H178V148Z" fill="#F3E4D3"/>
+                <path d="M213 330v-88h55v88M296 229h27v33h-27zM199 182h27v33h-27z" fill="#263C62"/>
+                <path d="M64 330v-75h49v75M23 243l62-90 93 75" stroke="#D8A84E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M351 330v-58h41v58" fill="#C93F68"/>
+                <circle cx="419" cy="256" r="35" fill="#849F7A"/>
+                <rect x="414" y="271" width="10" height="59" rx="5" fill="#4D6949"/>
+              </svg>
+            </div>
+            <div class="visual-quote">
+              <strong>Housing. Hope. Opportunity.</strong>
+              <span>Whole-person support for the next chapter.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-strip" aria-label="Areas of service">
+          <p>Supporting stronger lives through</p>
+          <div class="trust-items">
+            <span>Safe Housing</span>
+            <span>Personal Growth</span>
+            <span>Business Development</span>
+            <span>Community Connection</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who" id="who">
+      <div class="container who-grid">
+        <div class="logo-panel reveal"><img src="logo.svg" alt="Think Pink Presents A New You CDC — New Mindset, New Direction, A New You"></div>
+        <div class="reveal">
+          <p class="eyebrow">Who we are</p>
+          <h2>A nonprofit built around dignity, opportunity, and lasting change.</h2>
+          <p class="lead">A New You Community Development Coalition is a community-centered nonprofit helping individuals and families move from uncertainty to stability. We combine safe housing, educational guidance, personal development, business consulting, and trusted resource connections into a clear path forward.</p>
+          <p>Our work is rooted in the belief that every person deserves to be seen, supported, and equipped to build a healthier future. We welcome clients, families, referral partners, property owners, agencies, and community stakeholders who share that vision.</p>
+          <div class="impact-list">
+            <div><strong>Person-centered</strong><span>Respectful support tailored to individual goals.</span></div>
+            <div><strong>Community-driven</strong><span>Partnerships that expand access and opportunity.</span></div>
+            <div><strong>Results-focused</strong><span>Practical plans with clear next steps.</span></div>
+            <div><strong>Future-minded</strong><span>Stability today and generational progress tomorrow.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission" id="mission">
+      <div class="container mission-grid">
+        <div class="mission-statement reveal">
+          <p class="eyebrow">Our mission</p>
+          <h2>Helping people rebuild with dignity and direction.</h2>
+          <p class="lead">A New You Community Development Coalition creates pathways to stability, self-sufficiency, and generational progress by meeting people where they are and helping them move toward where they want to be.</p>
+          <p class="accent-copy">Every person deserves a safe place to begin again.</p>
+        </div>
+
+        <div class="values reveal">
+          <article class="value">
+            <span class="number">01</span>
+            <div><h3>Stability first</h3><p>We connect people to structured housing and practical support that create a foundation for lasting progress.</p></div>
+          </article>
+          <article class="value">
+            <span class="number">02</span>
+            <div><h3>Education that empowers</h3><p>We turn complex goals into clear plans through financial, personal, professional, and business education.</p></div>
+          </article>
+          <article class="value">
+            <span class="number">03</span>
+            <div><h3>Whole-person growth</h3><p>We support the health, confidence, accountability, and community connections that help people thrive.</p></div>
+          </article>
+          <article class="value">
+            <span class="number">04</span>
+            <div><h3>Generational impact</h3><p>We help clients build assets, strengthen businesses, and create opportunities that extend beyond one generation.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="programs">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How we help</p>
+          <h2>Support for the person, the plan, and the future.</h2>
+          <p class="lead">Explore our core service areas, then contact our team so we can help identify the right next step.</p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card featured reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 11 9-7 9 7"></path><path d="M5 10v10h14V10M9 20v-6h6v6"></path></svg>
+            </div>
+            <h3>Housing Programs</h3>
+            <p>Safe, structured housing options designed to support stability, dignity, and successful transitions.</p>
+            <ul class="check-list">
+              <li>Transitional and shared housing</li>
+              <li>Resident support and referrals</li>
+              <li>Agency and community partnerships</li>
+            </ul>
+            <a class="text-link" href="#contact">Ask about housing <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path><path d="m3 6 5-3 5 3 7-4"></path></svg>
+            </div>
+            <h3>Consulting & Development</h3>
+            <p>Clear, phased guidance for clients building stronger businesses, brands, finances, and real estate portfolios.</p>
+            <ul class="check-list">
+              <li>Business and brand planning</li>
+              <li>Credit and wealth education</li>
+              <li>Real estate growth strategies</li>
+            </ul>
+            <a class="text-link" href="#contact">Schedule a consultation <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="program-card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21a6.5 6.5 0 0 1 13 0M19 8h3M20.5 6.5v3"></path></svg>
+            </div>
+            <h3>Education & Self-Growth</h3>
+            <p>Practical tools, accountability, and mentorship that help clients strengthen their foundation and pursue new goals.</p>
+            <ul class="check-list">
+              <li>Personal development planning</li>
+              <li>Employment and resource navigation</li>
+              <li>Educational consultations</li>
+            </ul>
+            <a class="text-link" href="#contact">Start your plan <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+
+        <div class="resources-wrap reveal" id="resources">
+          <div class="resource-art">
+            <blockquote>“Your next chapter can begin today.”</blockquote>
+          </div>
+          <div class="resource-content">
+            <p class="eyebrow">Client resources</p>
+            <h2>Start with what you need.</h2>
+            <p>These quick paths help clients, property owners, and community partners reach the right area of support.</p>
+            <div class="resource-list">
+              <a class="resource-link" href="#contact"><span>01</span>Housing inquiry</a>
+              <a class="resource-link" href="#contact"><span>02</span>Client consultation</a>
+              <a class="resource-link" href="#contact"><span>03</span>Community referral</a>
+              <a class="resource-link" href="#contact"><span>04</span>Partner with us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="housing" id="housing">
+      <div class="container housing-grid">
+        <div class="reveal">
+          <p class="eyebrow">Supportive housing</p>
+          <h2>Comfortable, structured housing designed for a fresh start.</h2>
+          <p class="lead">Our Houston housing offers a clean, welcoming environment for adults seeking stability, structure, and respectful community living. We also welcome qualified agency and community referrals.</p>
+          <ul class="amenities">
+            <li>Furnished shared and private rooms</li><li>Central air conditioning</li>
+            <li>Free high-speed Wi-Fi</li><li>Washer and dryer access</li>
+            <li>Keyless entry</li><li>24-hour security monitoring</li>
+            <li>Fresh linens and bedding</li><li>Gated or designated parking</li>
+            <li>Transportation case-by-case</li><li>Support and resource referrals</li>
+          </ul>
+          <div class="button-row"><a class="button button-primary" href="#contact">Request housing</a><a class="button button-secondary" href="#contact">Make a referral</a></div>
+        </div>
+        <aside class="housing-flyer reveal" aria-label="Housing availability and pricing">
+          <span class="availability">Houston beds available</span>
+          <h3 style="font-family:Georgia,serif;font-size:2.5rem;margin:20px 0 8px">A place to reset.<br>A path to rebuild.</h3>
+          <p style="color:#d9e0ea">Professionally managed shared living with comfort, privacy options, and convenient amenities.</p>
+          <div class="price-grid">
+            <div class="price-card"><span>Shared rooms</span><strong>$700–$900</strong><small>per month</small></div>
+            <div class="price-card"><span>Private rooms</span><strong>$1,000</strong><small>per month</small></div>
+          </div>
+          <p><strong>Property features:</strong> Wi-Fi, 360° security, keyless entry, laundry, air conditioning, new linens and bedding, and access to a 12-passenger transportation vehicle based on availability and need.</p>
+          <p style="margin-bottom:0;color:#f1ca78;font-weight:800">Placement is based on availability, program fit, screening, and applicable requirements.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="events" id="events">
+      <div class="container events-grid">
+        <div class="reveal">
+          <p class="eyebrow">Calendar of events</p>
+          <h2>Connect, learn, and take your next step.</h2>
+          <p class="lead">Our calendar will feature housing orientations, community resource events, personal-development sessions, and business and wealth-building workshops.</p>
+          <div class="event-list">
+            <article class="event-card"><div class="event-date"><small>DATE</small>TBA</div><div><h3>Housing Orientation</h3><p>Learn about room options, accommodations, screening, house expectations, and the placement process.</p></div></article>
+            <article class="event-card"><div class="event-date"><small>DATE</small>TBA</div><div><h3>Community Resource Day</h3><p>Connect with supportive resources, referral partners, and services that strengthen stability.</p></div></article>
+            <article class="event-card"><div class="event-date"><small>DATE</small>TBA</div><div><h3>Wealth & Business Workshop</h3><p>Practical education for credit, business growth, property planning, and generational progress.</p></div></article>
+          </div>
+        </div>
+        <div class="calendar-box reveal">
+          <p class="eyebrow">Stay informed</p>
+          <h3>Upcoming dates will be posted here.</h3>
+          <p>Use the contact form to join the event notification list, request a private consultation, or ask about hosting a community partnership event.</p>
+          <div class="calendar-actions"><a class="button button-primary" href="#contact">Join event updates</a><a class="button button-secondary" href="#contact">Host an event</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-heading reveal" style="margin-inline:auto;text-align:center"><p class="eyebrow">Frequently asked questions</p><h2>Answers before you take the next step.</h2></div>
+        <div class="faq-list reveal">
+          <details><summary>Who does A New You CDC serve?</summary><p>We support adults, families, entrepreneurs, property owners, and community partners seeking housing, education, consulting, personal development, or connections to appropriate resources.</p></details>
+          <details><summary>How do I apply for housing?</summary><p>Complete the contact form and select “Housing inquiry.” Our team will follow up regarding availability, pricing, screening, required documents, and the appropriate next step.</p></details>
+          <details><summary>What housing accommodations are included?</summary><p>Available features may include furnished rooms, Wi-Fi, security monitoring, keyless entry, air conditioning, laundry access, fresh linens, parking, and transportation considered case-by-case.</p></details>
+          <details><summary>Do you accept agency and community referrals?</summary><p>Yes. Referral partners may use the contact form and select “Community or agency referral.” Placement remains subject to availability, screening, program fit, and applicable requirements.</p></details>
+          <details><summary>Can I schedule a consultation?</summary><p>Yes. Select “Consulting” on the form for business development, credit and wealth education, real estate planning, or personal-growth support.</p></details>
+          <details><summary>How can an organization partner with A New You CDC?</summary><p>We welcome conversations with agencies, nonprofits, employers, funders, property owners, and service providers. Select “Partnership” on the contact form and describe your proposed collaboration.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-shell reveal">
+        <div class="contact-copy">
+          <p class="eyebrow">Take the next step</p>
+          <h2>Let’s build a path forward.</h2>
+          <p>Tell us what kind of support you are seeking. A member of our team will follow up to discuss your needs and the best next step.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5h18v14H3z"></path><path d="m3 6 9 7 9-7"></path></svg></span>
+              <div><strong>Email</strong><span><a href="mailto:anewyoucdc@gmail.com">anewyoucdc@gmail.com</a></span></div>
+            </div>
+            <div class="contact-detail">
+              <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"></path></svg></span>
+              <div><strong>Phone</strong><span><a href="tel:+13464552710">346-455-2710</a></span></div>
+            </div>
+            <div class="contact-detail">
+              <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2"></circle></svg></span>
+              <div><strong>Service Area</strong><span>Houston, Texas and surrounding communities</span></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="interest">How can we help?</label>
+            <select id="interest" name="interest" required>
+              <option value="">Select one</option>
+              <option>Housing inquiry</option>
+              <option>Consulting services</option>
+              <option>Client resources</option>
+              <option>Community or agency referral</option>
+              <option>Event updates</option>
+              <option>Community partnership</option>
+              <option>Other support</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Tell us a little more</label>
+            <textarea id="message" name="message" placeholder="Share the best way for our team to support you."></textarea>
+          </div>
+          <button class="button button-primary" type="submit">Send inquiry
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+          </button>
+          <p class="form-note">Selecting “Send inquiry” will open your email app with the completed request addressed to A New You CDC.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> A New You Community Development Coalition. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#who">Who We Are</a>
+        <a href="#housing">Housing</a>
+        <a href="#events">Events</a>
+        <a href="#faq">FAQ</a>
+        <a href="who-we-serve.html">Who We Serve</a>
+        <a href="donate.html">Donate</a>
+        <a href="staff-partners.html">Staff & Partners</a>
+        <a href="client-upload.html">Client Upload</a>
+        <a href="#contact">Contact Form</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation menu');
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .12 });
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('visible'));
+    }
+
+    document.querySelector('#contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const subject = `Website inquiry: ${data.get('interest') || 'General support'}`;
+      const body = [
+        `Name: ${data.get('name') || ''}`,
+        `Phone: ${data.get('phone') || ''}`,
+        `Email: ${data.get('email') || ''}`,
+        `Interest: ${data.get('interest') || ''}`,
+        '',
+        'Message:',
+        data.get('message') || ''
+      ].join('\n');
+      document.querySelector('#form-status').textContent = 'Opening your email app to send this inquiry…';
+      window.location.href = `mailto:anewyoucdc@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
