@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+  <title id="title">A New You CDC</title><desc id="desc">Pink, purple and gold A New You Community Development Coalition logo.</desc>
+  <defs><linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ef6aa5"/><stop offset="1" stop-color="#9859af"/></linearGradient></defs>
+  <rect width="900" height="260" rx="28" fill="#fff"/>
+  <circle cx="130" cy="130" r="92" fill="none" stroke="#c99732" stroke-width="5"/>
+  <path d="M102 194c-38-56-38-111 8-151-8 47 29 49 33 88 4 35-18 51-41 63Zm34 3c33-13 64-37 77-76 11 50-13 82-77 76Z" fill="url(#p)"/>
+  <text x="250" y="126" font-family="Georgia,serif" font-size="72" fill="#4d4852">A New <tspan fill="#e84f91">You</tspan></text>
+  <text x="254" y="168" font-family="Arial,sans-serif" font-size="25" letter-spacing="7" fill="#9859af">COMMUNITY DEVELOPMENT COALITION</text>
+  <text x="254" y="208" font-family="Arial,sans-serif" font-size="18" letter-spacing="4" fill="#c99732">EMPOWER • INSPIRE • TRANSFORM</text>
+</svg>
