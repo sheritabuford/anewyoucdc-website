@@ -1,0 +1,1 @@
+(function(){const defaults={booking:'https://app.squareup.com/appointments/book/2pkxr60y2b6k2z/LJZDSPF623TZ8/start'};const saved={...defaults,...JSON.parse(localStorage.getItem('anyou_app_links')||'{}')};document.querySelectorAll('[data-app-link]').forEach(el=>{const url=saved[el.dataset.appLink];if(url)el.href=url});window.ANewYouLinks=saved})();
